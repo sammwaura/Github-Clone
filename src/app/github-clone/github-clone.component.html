@@ -1,3 +1,20 @@
-<p>
-  github-clone works!
-</p>
+<div *ngIf="app">
+  <div class="card card-default">
+    <div class="card-heading">
+      {{app.name}} <small>{{app.login}}</small>
+       <span *ngIf="app.company"> ,Works at {{app.company}}</span>
+       {{app.bio}}
+    </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="{{app.}}" alt="">
+
+      </div>
+
+    </div>
+
+</div>
+  </div>
+
+</div>

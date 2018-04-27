@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AppService} from '../app.service';
 
 @Component({
   selector: 'app-github-clone',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./github-clone.component.css']
 })
 export class GithubCloneComponent implements OnInit {
+  private app:any[];
 
-  constructor() { }
+  constructor(private appService: AppService) {
+    this.appService.getProfileInfo().subscribe(app =>{
+      console.log(app);
+      this.app = app;
+    } )
+   }
 
   ngOnInit() {
   }
