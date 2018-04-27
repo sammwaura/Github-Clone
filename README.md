@@ -1,27 +1,41 @@
-# GithubClone
+# BY MwauraSamuel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
-## Development server
+## GITHUB Clone
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This is a website where users may enter a Github username into a form, submit it and see names & description of that persons public repositories.
+The User can also look for repositories.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## LiveLink
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
 
-## Running end-to-end tests
+* HTML
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* Type Script
 
-## Further help
+* Bootstrap
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## To SetUp And Run The Project You Need To;
+
+* Open GitHub and search my username ## Sammwaura
+
+* Locate the Repository GitHub-Clone and open it
+
+*On the Download/Clone tab select the download option and save to a folder that is easily accesible(or still you could clone the repo to your computer)
+
+* Unzip the file and the entire repo will be available on your machine
+
+* Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+
+* Run ng test to execute the unit tests via Karma. Feel free to explore my other repositories!
+
+## LICENSE
+
+
+
