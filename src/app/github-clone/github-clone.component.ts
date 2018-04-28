@@ -8,12 +8,24 @@ import {AppService} from '../app.service';
 })
 export class GithubCloneComponent implements OnInit {
   private app:any[];
+  private repos: any [];
+  username:string;
 
   constructor(private appService: AppService) {
-    this.appService.getProfileInfo().subscribe(app =>{
+   
+   }
+
+   findapp() {
+    this.appService.updateapp(this.username);
+    this.appService.getappInfo().subscribe(app =>{
       console.log(app);
       this.app = app;
-    } )
+    });
+
+    this.appService.getappRepos().subscribe(repos  => {
+      console.log(repos);
+      this.repos = repos;
+    });
    }
 
   ngOnInit() {

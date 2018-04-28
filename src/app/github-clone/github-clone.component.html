@@ -1,17 +1,51 @@
+<form action="" class="search-form">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search git users with username" [(ngModel)]="username" name="username" (keyup)="findapp()" >
+
+  </div>
+</form>
+
+
 <div *ngIf="app">
   <div class="card card-default">
     <div class="card-heading">
       {{app.name}} <small>{{app.login}}</small>
        <span *ngIf="app.company"> ,Works at {{app.company}}</span>
-       {{app.bio}}
+       {{app.location}}
     </div>
   <div class="card-body">
     <div class="row">
       <div class="col-sm-3">
-        <img src="{{app.}}" alt="">
-
+        <img src="{{app.avatar_url}}" class="img-rounded-circle img-fluid" alt="app Image">
       </div>
-
+      <div class="col-sm-5">
+        <ul class="List-group">
+          <li class="list-group-item" *ngIf="app.bio">{{app.bio}}</li>
+          <li class="list-group-item" *ngIf="app.bio.hireable">Available for hire</li>
+          <li class="list-group-item" *ngIf="app.blog"><a href="{{app.blog}}" target="_blank">{{app.blog}}</a></li>
+          <li class="list-group-item" *ngIf="app.email"><a href="{{app.email}}" target="_blank">{{app.email}}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+      </div>
+      <p>
+        <span class="badge badge-secondary">{{app.followers}} Followers</span>
+        <span class="badge badge-primary">{{app.following}} Followings</span>
+        <span class="badge badge-success">{{app.public_gists}} Public gists</span>
+        <span class="badge badge-info">{{app.public_repos}} Public repos</span>
+      </p>
+      <p><a href="{{app.html_url}}" target="_blank"class="btn btn-outline-success btn-sm">View profile on github</a> </p>
+      <div class="card card-default">
+        <div class="card-heading">
+          <h3 class="card-title">Repos</h3>
+        </div>
+        <div class="card-body" *ngFor="let repo of repos">
+          <p class="clearfix">
+              {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View this project on github</a>
+          </p>
+            <p>{{repo.description}}</p>
+        </div>
+      </div>
     </div>
 
 </div>
