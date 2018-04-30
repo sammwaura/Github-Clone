@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Http,Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
+import {app} from './app';
+import {Repos} from './repos';
+import {environment} from '../environments/environment';
+
+ 
 
 
 
