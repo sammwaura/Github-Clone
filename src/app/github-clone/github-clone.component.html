@@ -23,7 +23,7 @@
       <div class="col-sm-5">
         <ul class="List-group">
           <li class="list-group-item" *ngIf="app.bio">{{app.bio}}</li>
-          <li class="list-group-item" *ngIf="app.bio.hireable">Available for hire</li>
+          <li class="list-group-item" *ngIf="app.bio.hireble">Available for hire</li>
           <li class="list-group-item" *ngIf="app.blog"><a href="{{app.blog}}" target="_blank">{{app.blog}}</a></li>
           <li class="list-group-item" *ngIf="app.email"><a href="{{app.email}}" target="_blank">{{app.email}}</a></li>
         </ul>
@@ -43,7 +43,7 @@
         </div>
         <div class="card-body" *ngFor="let repo of repos">
           <p class="clearfix">
-              {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View this project on github</a>
+              {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right style">View this project on github</a>
           </p>
             <p>{{repo.description}}</p>
         </div>
