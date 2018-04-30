@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AppService} from '../app.service';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-github-clone',
@@ -13,10 +14,20 @@ export class GithubCloneComponent implements OnInit {
 
 
   constructor(private appService: AppService) {
-   
+this.appService.getappInfo().subscribe(app => {
+  console.log(app);
+  this.app = app;
+});
+   this.appService.getappRepos().subscribe(repos => {
+     console.log(repos);
+     this.repos = repos;
+   });
    }
 
-   findapp() {
+   
+  ngOnInit() {
+  }
+  findapp() {
     this.appService.updateapp(this.username);
     this.appService.getappInfo().subscribe(app =>{
       console.log(app);
@@ -27,13 +38,7 @@ export class GithubCloneComponent implements OnInit {
       console.log(repos);
       this.repos = repos;
     });
-
-     
-    
    }
-
-  ngOnInit() {
-  }
 
 }
  
