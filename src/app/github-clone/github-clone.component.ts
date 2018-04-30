@@ -7,9 +7,10 @@ import {AppService} from '../app.service';
   styleUrls: ['./github-clone.component.css']
 })
 export class GithubCloneComponent implements OnInit {
-  private app:any[];
-  private repos: any [];
+  public app:any[];
+  private repos: any[];
   username:string;
+
 
   constructor(private appService: AppService) {
    
@@ -26,9 +27,13 @@ export class GithubCloneComponent implements OnInit {
       console.log(repos);
       this.repos = repos;
     });
+
+     
+    
    }
 
   ngOnInit() {
   }
 
 }
+ 
