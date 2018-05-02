@@ -15,7 +15,7 @@
        <span *ngIf="app.company"> ,Works at {{app.company}}</span>
        {{app.location}}
     </div>
-  <div class="card-body">
+  <div class="card-body" >
     <div class="row">
       <div class="col-sm-3">
         <img src="{{app.avatar_url}}" class="img-rounded-circle img-fluid" alt="app Image">
@@ -41,12 +41,14 @@
         <div class="card-heading">
           <h3 class="card-title">Repos</h3>
         </div>
-        <div class="card-body" *ngFor="let repo of repos">
+        <div class="container" style="background-image: Url ('../assets/git.png');">
+        <div class="card-body"style="padding-right:500px;"*ngFor="let repo of repos">
           <p class="clearfix">
               {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right style">View this project on github</a>
           </p>
             <p>{{repo.description}}</p>
         </div>
+      </div>
       </div>
     </div>
 
